@@ -36,7 +36,7 @@ int main() {
 
     printf("Addition: %.2f\n", add(a, b));
     printf("Subtraction: %.2f\n", subtract(a, b));
-    printf("Multiplication: %f\n", multiply(a, b));
+    printf("Multiplication: %2.f\n", multiply(a, b));
     printf("Division: %.2f\n", divide(a, b));
     printf("Modulus: %.2f\n", modulus(a, b));
     printf("Modulus: %.2f\n", modulus(a, b)); 
