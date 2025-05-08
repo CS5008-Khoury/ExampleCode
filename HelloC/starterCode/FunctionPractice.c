@@ -10,44 +10,37 @@
 #include <stdint.h> 
 
 
-int add(int a, int b) {
+double add(int64_t a, int64_t b) {
     return a + b;
 }
 
-int subtract(int a, int b) {
+double subtract(int64_t a, int64_t b) {
     return a - b;
 }
 
-int multiply(int a, int b) {
+double multiply(int64_t a, int64_t b) {
     return a * b;
 }
 
-int divide(int a, int b) {
-    if (b == 0) {
-        printf("Error: Division by zero.\n");
-        return 0; // Return 0 or handle the error as needed
-    }
+double divide(int64_t a, int64_t b) {
     return a / b;
 }
 
-int modulus(int a, int b) {
-    if (b == 0) {
-        printf("Error: Division by zero.\n");
-        return 0; // Return 0 or handle the error as needed
-    }
+double modulus(int64_t a, int64_t b) {
     return a % b;
 }
 
-
 int main() {
-    int a = 10;
-    int b = 5;
+    long a = 100;
+    short b = 6;
 
-    printf("Addition: %d\n", add(a, b));
-    printf("Subtraction: %d\n", subtract(a, b));
-    printf("Multiplication: %d\n", multiply(a, b));
-    printf("Division: %d\n", divide(a, b));
-    printf("Division by zero: %d\n", divide(a, 0)); // Test division by zer
+    printf("Addition: %.2f\n", add(a, b));
+    printf("Subtraction: %.2f\n", subtract(a, b));
+    printf("Multiplication: %f\n", multiply(a, b));
+    printf("Division: %.2f\n", divide(a, b));
+    printf("Modulus: %.2f\n", modulus(a, b));
+    printf("Modulus: %.2f\n", modulus(a, b)); 
+    printf("Modulus: %.0f\n", modulus(a, b)); 
 
     return 0;
 }
